@@ -22,17 +22,24 @@ export default function App() {
     await setScanned(true);
     data_1 = await JSON.parse(data)
     userData = await fetch(`http://34.64.197.138:3333/search?ticketId=${data_1.ticketId}`)
-    // user = await userData.json()
-    console.log(JSON.parse(userData))
-    if (userData=="empty") {
-      alert(`존재하지 않는 티켓 입니다! 다시한번 확인하여 주세요`);
-      
+    user = await userData.json()
+    // data_2 = JSON.stringify(userData)
+    console.log(typeof(user))
+    
+    if (user[9] ==undefined) {
+      alert("인증되지 않은 티켓입니다 다시 시도해 주세요")
     }
     else {
-      user = await userData.json()
-      console.log(user)
-      alert(`Bar code with type ${type} and data ${data_1.ticketId} has been scanned! ${user[9]}`);
+      alert(`검증된 티켓 입니다. 환영합니다 !! ${user[9]}님`);
     }
+
+      
+      
+    // else {
+    //   user = await userData.json()
+    //   console.log(user)
+    //   alert(`Bar code with type ${type} and data ${data_1.ticketId} has been scanned! ${user}`);
+    // }
     // alert(`존재하지 않는 티켓 입니다! 다시한번 확인하여 주세요`);
    }
     
