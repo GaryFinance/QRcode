@@ -1533,6 +1533,18 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@nartc/react-native-barcode-mask@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@nartc/react-native-barcode-mask/-/react-native-barcode-mask-1.2.0.tgz#e01ab43f1fa848d73121c27d3675c2d6557d670f"
+  integrity sha512-QXawZlaQz+QQ6Jrg4AEgrCXxsYltLZ89sxJXyt36pDRnT122aoK0/84m2dORd29V+/22BjwceXDZePayqXDaRA==
+
+"@react-native-community/async-storage@^1.6.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.12.1.tgz#25f821b4f6b13abe005ad67e47c6f1cee9f27b24"
+  integrity sha512-70WGaH3PKYASi4BThuEEKMkyAgE9k7VytBqmgPRx3MzJx9/MkspwqJGmn3QLCgHLIFUgF1pit2mWICbRJ3T3lg==
+  dependencies:
+    deep-assign "^3.0.0"
+
 "@react-native-community/cli-debugger-ui@^4.13.1":
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.13.1.tgz#07de6d4dab80ec49231de1f1fbf658b4ad39b32c"
@@ -2869,6 +2881,13 @@ expo-asset@~8.2.1:
     md5-file "^3.2.3"
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
+
+expo-barcode-scanner@~9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/expo-barcode-scanner/-/expo-barcode-scanner-9.1.0.tgz#c699c2ef99478b0ea484a1ccc1f60562f60a3663"
+  integrity sha512-gf2MGw9Hs8cH0Xz+JdPSHg9mHxR46acENg3eh1dMsXbJyGCbmLIzvlQhBW7f2Cuqcx7Q30kGF91wzaK+VVUEoQ==
+  dependencies:
+    lodash "^4.6.0"
 
 expo-constants@~9.3.3:
   version "9.3.5"
@@ -5036,7 +5055,7 @@ promise@^8.0.3:
   dependencies:
     asap "~2.0.6"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5100,6 +5119,33 @@ react-is@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
+
+react-native-barcode-mask@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-native-barcode-mask/-/react-native-barcode-mask-1.2.4.tgz#271b868d1d9040e04b9f8f32ec4ee6f6a2639b3b"
+  integrity sha512-Jh3mEs/xUBs/z9mKkj2mM07MMQ2SdtW9mU4FOo5DQyA2kDte6lW87vIYFkWw1nxpzc7sy28ahMsgId8LTtKZsg==
+  dependencies:
+    prop-types "^15.6.2"
+
+"react-native-camera@git+https://git@github.com/react-native-community/react-native-camera.git":
+  version "3.42.2"
+  resolved "git+https://git@github.com/react-native-community/react-native-camera.git#6a81dea6574389add42e4d3f005dabda89115b8c"
+  dependencies:
+    prop-types "^15.6.2"
+
+react-native-permissions@^2.0.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-2.2.2.tgz#3d2a63f6b7d6be52fc86e30f77412a9566283028"
+  integrity sha512-ihf4shQDSX5Oo9ChQXb9kr13mmyyNem5MaEvOpr3dCjhBOBWyEMztXm9/uPK1Qg5PsNpaYLa1KpcPZDCw87LXg==
+
+react-native-qrcode-scanner@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-qrcode-scanner/-/react-native-qrcode-scanner-1.5.3.tgz#90ed1cc342af4399dcd07454966127ac6a9bfdaf"
+  integrity sha512-JvjUH1+qR1rz0SDFyr0jXZZKC4B5rgZ+4yQrDsHl1jIYcyq5UZBcz2XrDYYeb6+yddvoJXFCgrHMxzhTSPbUnw==
+  dependencies:
+    "@react-native-community/async-storage" "^1.6.1"
+    prop-types "^15.5.10"
+    react-native-permissions "^2.0.2"
 
 react-native-safe-area-context@3.1.9:
   version "3.1.9"
