@@ -20,11 +20,11 @@ export default function App() {
 
   const handleBarCodeScanned = async ({ type, data }) => {
     await setScanned(true);
-    data_1 = await JSON.parse(data)
-    userData = await fetch(`http://34.64.197.138:3333/search?ticketId=${data_1.ticketId}`)
+    // data_1 = await JSON.parse(data)
+    userData = await fetch(`http://34.64.197.138:3333/search?ticketId=${data.ticketId}`)
     user = await userData.json()
     // data_2 = JSON.stringify(userData)
-    console.log(typeof(user))
+    console.log(data)
     
     if (user[9] ==undefined) {
       alert("인증되지 않은 티켓입니다 다시 시도해 주세요")
